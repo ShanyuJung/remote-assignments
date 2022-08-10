@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>RWD Page Layout</title>
   </head>
   <body>
     <header class="nav-container">
-      <div class="logo">Website title/Logo</div>
+      <div class="logo"><a href="">Website title/Logo</a></div>
+      <label for="switch" class="toggle">
+        <div class="hamberger-menu"></div>
+        <div class="hamberger-menu"></div>
+        <div class="hamberger-menu"></div>
+      </label>
       <nav class="menu">
-        <ul>
-          <li><a href="">item1</a></li>
-          <li><a href="">item2</a></li>
-          <li><a href="">item3</a></li>
-          <li><a href="">item4</a></li>
+        <input type="checkbox" id="switch" />
+        <ul class="menu-list">
+          <li><a href="#item1">item1</a></li>
+          <li><a href="#item2">item2</a></li>
+          <li><a href="#item3">item3</a></li>
+          <li><a href="#item4">item4</a></li>
         </ul>
       </nav>
     </header>
