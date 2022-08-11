@@ -342,6 +342,10 @@ body {
 }
 
 /* Developer-product */
+.developer-product {
+  margin: auto;
+}
+
 .product-container {
   width: 100%;
   padding: 40px 0;
