@@ -343,7 +343,7 @@ body {
 
 /* Developer-product */
 .developer-product {
-  margin: auto;
+  width: 100%;
 }
 
 .product-container {
