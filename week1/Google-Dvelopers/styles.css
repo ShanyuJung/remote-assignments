@@ -282,6 +282,7 @@ body {
   display: grid;
   grid-column-gap: 32px;
   grid-template-columns: repeat(12, calc((100% - 352px - 5rem) / 12));
+  padding: 2.5rem 0px;
   width: 100%;
 }
 
@@ -290,7 +291,6 @@ body {
   grid-column-end: 7;
   color: #fff;
   margin: 2.5rem 0;
-  /* padding: 2.5rem 0px; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -986,6 +986,10 @@ body {
   .developers-profile-container {
     width: 90%;
   }
+
+  .banner-grid-container {
+    padding: 1.5rem 0;
+  }
 }
 
 @media (max-width: 840px) {
@@ -1001,6 +1005,10 @@ body {
   /* News RWD */
   .news-card {
     width: calc(50% - 20px);
+  }
+
+  .banner-grid-container {
+    padding: 0;
   }
 
   /* Developer RWD */
@@ -1043,6 +1051,10 @@ body {
 
 @media (max-width: 599px) {
   /* Banner section RWD */
+  .banner-grid-container {
+    padding-top: 2.5rem;
+  }
+
   .banner-content {
     grid-column-start: 1;
     grid-column-end: 13;
