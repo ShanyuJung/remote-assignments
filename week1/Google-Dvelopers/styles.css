@@ -681,6 +681,9 @@ body {
 
 .developers-section-container {
   width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #c1c1c1;
 }
 
 .developers-banner {
@@ -688,7 +691,7 @@ body {
   width: 100%;
   max-width: 1440px;
   margin: auto;
-  padding: 40px 0;
+  padding: 40px 0px;
   text-align: center;
 }
 
@@ -707,7 +710,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-family: "Roboto", "sans-serif";
-  font-weight: thin;
+  font-weight: lighter;
   margin: 0;
 }
 
@@ -729,4 +732,92 @@ body {
 
 .developers-banner-btn button:hover {
   background-color: #dde9f9;
+}
+
+.developers-prrofile-wrapper {
+  width: 100%;
+  padding: 0 40px 0 0;
+}
+
+.developers-profile-container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.developer-profile-card {
+  box-sizing: border-box;
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  width: 22%;
+  padding: 20px 20px 0px 20px;
+  text-align: center;
+}
+
+.developer-image {
+  margin: 0 auto 20px auto;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.developer-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.developer-info h3 {
+  font-size: 24px;
+  color: #202124;
+  font-weight: lighter;
+  margin: 0 0 10px 0;
+}
+
+.developer-info p {
+  font-size: 16px;
+  color: #202124;
+  font-weight: lighter;
+  margin: 0 0 16px 0;
+}
+
+.developer-info-detail {
+  width: 100%;
+  margin: 16px 0px;
+}
+
+.developer-info-detail h4 {
+  margin: 0;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.developer-info-detail p {
+  margin: 0;
+  color: #c1c1c1;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.developer-profile-card-btn button {
+  margin: 0 auto 20px 0;
+  padding: 0 8px;
+  height: 36px;
+  background-color: inherit;
+  color: #1a73e8;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+}
+
+.developer-profile-card-btn button:hover {
+  background-color: #dde9f9;
+  cursor: pointer;
 }
