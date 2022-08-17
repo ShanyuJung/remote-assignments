@@ -22,8 +22,12 @@ function max(numbers) {
   return maxNum;
 }
 
+//Assignment Example console result
+console.log(max([1, 2, 4, 5]));
+console.log(max([5, 2, 7, 1, 6]));
+
 //Handle input array and window content
-function maxNumFunc(numbers) {
+function maxNumFunc() {
   //format warning text and resultText
   warning.textContent = "";
   result.textContent = "";
