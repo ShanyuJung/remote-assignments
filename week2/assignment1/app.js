@@ -40,16 +40,19 @@ function maxNumFunc() {
   }
 
   //check user enter only numbers, and convert input value to an array
-  let enteredArr = input.value.trim().split(",");
+  let enteredArr = input.value.split(" ").join("").split(",");
+  console.log(enteredArr);
   for (let i = 0; i < enteredArr.length; i++) {
     if (isNaN(enteredArr[i])) {
       warning.textContent = `Something went wrong, please make sure you enter only numbers ,and separate them by "," `;
       return;
     }
   }
+  for (let i = 0; i < enteredArr.length; i++) {
+    enteredArr[i] = Number(enteredArr[i]);
+  }
 
   //Show the max number in HTML
-  let maxNum;
-  maxNum = max(enteredArr);
-  result.textContent = `The max number of array is ${maxNum}`;
+  let displayMaxNum = max(enteredArr);
+  result.textContent = `The max number of array is ${displayMaxNum}`;
 }
