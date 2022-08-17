@@ -4,6 +4,7 @@ const warning = document.getElementById("warningText");
 const result = document.getElementById("resultText");
 button.addEventListener("click", maxNumFunc);
 
+//Find the max number of array by for loop
 function max(numbers) {
   let maxNum;
   if (numbers.length == 1) {
@@ -21,6 +22,7 @@ function max(numbers) {
   return maxNum;
 }
 
+//Handle input array and window content
 function maxNumFunc(numbers) {
   //format warning text and resultText
   warning.textContent = "";
@@ -44,25 +46,8 @@ function maxNumFunc(numbers) {
     return;
   }
 
-  //Find the max number of array by for loop
+  //Show the max number in HTML
   let maxNum;
   maxNum = max(numArr);
-
-  // if (numArr.length == 1) {
-  //   maxNum = numArr[0];
-  // } else {
-  //   maxNum = numArr[0];
-  //   for (let i = 1; i < numArr.length; i++) {
-  //     if (numArr[i] > maxNum) {
-  //       maxNum = numArr[i];
-  //     } else {
-  //       maxNum = maxNum;
-  //     }
-  //   }
-  // }
-
-  // max(numArr);
-  // console.log(maxNum)
-  //Show the max number in HTML
   result.textContent = `The max number of array is ${maxNum}`;
 }
