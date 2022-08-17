@@ -1,0 +1,66 @@
+.wrapper {
+  text-align: center;
+  width: 100vw;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.invoice {
+  width: 80%;
+  max-width: 500px;
+  border: 1px solid #555;
+  margin: auto;
+  height: fit-content;
+}
+
+#productList {
+  border-bottom: 1px solid #555;
+  min-height: 100px;
+}
+
+#totalPrice {
+  min-height: 100px;
+}
+
+.productContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 50px;
+  width: 90%;
+  margin: 25px auto;
+  font-weight: bolder;
+  font-size: 28px;
+}
+
+.discountContainer {
+  width: 90%;
+  /* border-top: 1px solid #555; */
+  /* border-bottom: 1px solid #555; */
+  text-align: right;
+  margin: 5px auto;
+}
+
+.totalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 50px;
+  width: 90%;
+  margin: 25px auto;
+  font-weight: bolder;
+  font-size: 36px;
+  height: 100px;
+}
+
+.totalTitle {
+  flex: 1;
+  text-align: left;
+}
+
+.totalFormula {
+  font-size: 18px;
+  margin: auto 10px;
+}
