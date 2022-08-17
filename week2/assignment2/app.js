@@ -74,6 +74,7 @@ function calculateHandler() {
   if (calResult === "Not supported") {
     result.style.fontSize = "18px";
     warning.textContent = "Operator is not supported";
+    inputOperator.style.backgroundColor = "#FFB6C1";
   } else {
     result.style.fontSize = "32px";
   }
