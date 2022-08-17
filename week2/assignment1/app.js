@@ -41,17 +41,15 @@ function maxNumFunc() {
 
   //check user enter only numbers, and convert input value to an array
   let enteredArr = input.value.trim().split(",");
-  let numArr = enteredArr.map(function (x) {
-    return parseInt(x, 10);
-  });
-  if (numArr.includes(NaN)) {
-    warning.textContent = `Something went wrong, please make sure you enter only numbers ,and separate them by "," `;
-    // console.log("NAN");
-    return;
+  for (let i = 0; i < enteredArr.length; i++) {
+    if (isNaN(enteredArr[i])) {
+      warning.textContent = `Something went wrong, please make sure you enter only numbers ,and separate them by "," `;
+      return;
+    }
   }
 
   //Show the max number in HTML
   let maxNum;
-  maxNum = max(numArr);
+  maxNum = max(enteredArr);
   result.textContent = `The max number of array is ${maxNum}`;
 }
