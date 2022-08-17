@@ -40,8 +40,14 @@ function maxNumFunc() {
   }
 
   //check user enter only numbers, and convert input value to an array
-  let enteredArr = input.value.split(" ").join("").split(",");
-  console.log(enteredArr);
+  let enteredArr = input.value
+    .split(" ")
+    .join("")
+    .split(",")
+    .filter((item) => {
+      return item !== "";
+    });
+
   for (let i = 0; i < enteredArr.length; i++) {
     if (isNaN(enteredArr[i])) {
       warning.textContent = `Something went wrong, please make sure you enter only numbers ,and separate them by "," `;
