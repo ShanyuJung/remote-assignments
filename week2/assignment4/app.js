@@ -16,20 +16,19 @@ function textChangeHandler(target) {
 
 //Request 2: Click to Show/Close Menu
 toggleButton.addEventListener("click", () => {
-  showModalHandler(menu, "block");
-  console.log("show");
+  showModalHandler(menu, "showMenu");
 });
 
 closeButton.addEventListener("click", () => {
-  closeModalHandler(menu);
+  closeModalHandler(menu, "showMenu");
 });
 
-function showModalHandler(modal, displaytype) {
-  modal.style.display = displaytype;
+function showModalHandler(modal, className) {
+  modal.classList.add(className);
 }
 
-function closeModalHandler(modal) {
-  modal.style.display = "none";
+function closeModalHandler(modal, className) {
+  modal.classList.remove(className);
 }
 
 //Request 3: Click to Show More Content Boxes.
