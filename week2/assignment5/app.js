@@ -7,24 +7,18 @@ button.addEventListener("click", myFunc);
 
 //Algorithm Practice
 function twoSum(nums, target) {
-  let result = [];
-
+  let map = {};
   for (let i = 0; i < nums.length; i++) {
-    if (result.length == 2) {
-      break;
+    const anotherNum = target - nums[i];
+
+    if (anotherNum in map) {
+      return [map[anotherNum], i];
     }
-    for (let j = 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] == target) {
-        result.push(i, j);
-        break;
-      }
-    }
+
+    map[nums[i]] = i;
   }
 
-  if (result.length == 0) {
-    return "Try another array or summary!";
-  }
-  return result;
+  return null;
 }
 
 //Assignment Example console result
@@ -88,8 +82,8 @@ function myFunc() {
 
   //Show the max number in HTML
   let displayResult = twoSum(enteredArr, sumNumber);
-  if (displayResult == "Try another array or summary!") {
-    result.textContent = `${displayResult}`;
+  if (displayResult == null) {
+    result.textContent = "Try another array or summary!";
     result.style.color = "red";
   } else {
     result.textContent = `Result: [${displayResult}]`;
