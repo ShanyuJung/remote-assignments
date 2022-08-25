@@ -1,6 +1,7 @@
 const { application } = require("express");
 var express = require("express");
 var router = express.Router();
+var cookieParser = require("cookie-parser");
 const app = express();
 
 /* GET home page. */
@@ -32,6 +33,26 @@ router.get("/getData", function (req, res, next) {
   } else {
     res.send("Lack of Parameter");
   }
+});
+
+app.use(cookieParser());
+
+router.get("/myName", function (req, res, next) {
+  if (req.cookies.name !== undefined) {
+    res.render("user", {
+      title: "User page",
+      username: `${req.cookies.name}`,
+    });
+  } else {
+    res.render("signup");
+  }
+});
+
+router.get("/trackName", function (req, res, next) {
+  const username = req.query.name;
+  res.cookie("name", username);
+
+  res.send(`${username}`);
 });
 
 app.use(express.static("public"));
