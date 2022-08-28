@@ -2,9 +2,9 @@ extends layout
 
 block content
   h1 Hello, enter your name to sign up.
+  form(action="/trackName", method="GET") 
+   input(type="text" placeholder="Type your name here" id="usernameInput" name="name")
+   button(id="submitBtn" type="submit") Submit
 
-  input(type="text" placeholder="Type your name here" id="usernameInput")
-  button(id="submitBtn") Submit
 
-  script(type='text/javascript' ,src='javascripts/signup.js')
   

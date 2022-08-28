@@ -51,8 +51,7 @@ router.get("/myName", function (req, res, next) {
 router.get("/trackName", function (req, res, next) {
   const username = req.query.name;
   res.cookie("name", username);
-
-  res.send(`${username}`);
+  res.redirect("http://localhost:3000/myName");
 });
 
 app.use(express.static("public"));
