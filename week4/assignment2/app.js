@@ -2,7 +2,6 @@ const { useState, useEffect } = React;
 
 function MyApp() {
   const [list, setList] = useState([]);
-  const lists = [111, 222];
 
   useEffect(() => {
     function ajax(src, callback) {
@@ -37,7 +36,7 @@ function MyApp() {
       <ul>
         {list.map((item) => {
           return (
-            <li key={lists[item]}>
+            <li key={list[item]}>
               <h3>{item.name}</h3>
               <h4>{item.description}</h4>
               <h4>Price: {item.price} </h4>
