@@ -36,7 +36,7 @@ function MyApp() {
       <ul>
         {list.map((item) => {
           return (
-            <li key={list[item]}>
+            <li key={item.name}>
               <h3>{item.name}</h3>
               <h4>{item.description}</h4>
               <h4>Price: {item.price} </h4>
