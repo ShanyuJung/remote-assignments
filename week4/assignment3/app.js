@@ -44,7 +44,11 @@ const Navbar = (props) => {
 const ContentBox = (props) => {
   return (
     <>
-      <div className="content-box">{props.children}</div>
+      <div
+        className={props.isVisible ? "content-box" : "content-box hidden-box"}
+      >
+        {props.children}
+      </div>
     </>
   );
 };
@@ -82,23 +86,20 @@ const MyApp = () => {
       </div>
       <section className="container">
         <div className="section-title">Section Title</div>
-        <ContentBox>Content Box 1</ContentBox>
-        <ContentBox>Content Box 2</ContentBox>
-        <ContentBox>Content Box 3</ContentBox>
-        <ContentBox>Content Box 4</ContentBox>
+        <ContentBox isVisible={true}>Content Box 1</ContentBox>
+        <ContentBox isVisible={true}>Content Box 2</ContentBox>
+        <ContentBox isVisible={true}>Content Box 3</ContentBox>
+        <ContentBox isVisible={true}>Content Box 4</ContentBox>
         <div className="action-btn-container">
           <button className="action-btn" onClick={showMoreBoxHandler}>
             Call to Action
           </button>
         </div>
-        {isVisible && (
-          <>
-            <ContentBox>Content Box 1</ContentBox>
-            <ContentBox>Content Box 2</ContentBox>
-            <ContentBox>Content Box 3</ContentBox>
-            <ContentBox>Content Box 4</ContentBox>
-          </>
-        )}
+
+        <ContentBox isVisible={isVisible}>Content Box 1</ContentBox>
+        <ContentBox isVisible={isVisible}>Content Box 2</ContentBox>
+        <ContentBox isVisible={isVisible}>Content Box 3</ContentBox>
+        <ContentBox isVisible={isVisible}>Content Box 4</ContentBox>
       </section>
     </>
   );
